@@ -1,0 +1,82 @@
+.Header {
+  background-color: #292950;
+  .headerWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .logo {
+        width: 120px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:hover {
+          filter: invert(100%);
+        }
+      }
+    }
+    .login {
+      color: #ffffff;
+      float: right;
+    }
+  }
+}
+
+.hvrShutterOutVertical {
+  color: #292950;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: white;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  padding: 5px 10px;
+}
+.hvrShutterOutVertical:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvrShutterOutVertical:hover, .hvrShutterOutVertical:focus, .hvrShutterOutVertical:active {
+  color: white;
+}
+.hvrShutterOutVertical:hover:before, .hvrShutterOutVertical:focus:before, .hvrShutterOutVertical:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.hvrShutterOutVertical {
+  &.active {
+    color: white;
+    &:before {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+}

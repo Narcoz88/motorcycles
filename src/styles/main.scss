@@ -1,0 +1,43 @@
+@import 'reset';
+@import 'normalize';
+@import 'fonts';
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font: 1rem 'Roboto-Regular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.wrap {
+  flex: 1 0 auto;
+}
+
+.pageWrap {
+  padding: 30px 0;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.infinite-scroll-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  overflow: hidden !important;
+}

@@ -1,0 +1,5 @@
+{
+  "/motorcycles": "/motorcycles",
+  "/motorcycles/:id": "/motorcycles",
+  "/register": "/register"
+}

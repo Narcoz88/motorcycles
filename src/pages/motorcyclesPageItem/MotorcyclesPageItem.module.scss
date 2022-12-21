@@ -1,0 +1,38 @@
+.MotorcyclesPageItem {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+    .info {
+      display: grid;
+      grid-gap: 10px;
+      .infoItem {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .infoItemTitle {
+          color: #a5a5a5;
+        }
+      }
+    }
+    .gallery {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .description {
+    .titleDescription {
+      font: 1.5rem 'Roboto-Regular', Arial, sans-serif;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+}
