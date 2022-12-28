@@ -10,6 +10,19 @@ body {
   font: 1rem 'Roboto-Regular', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #292950 transparent;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #292950;
+    border-radius: 5px;
+  }
 }
 
 .container {
@@ -38,6 +51,11 @@ h2 {
 .infinite-scroll-component {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
   overflow: hidden !important;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 540px) {
+      grid-template-columns: 1fr;
+    }
+  }
 }

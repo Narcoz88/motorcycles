@@ -1,5 +1,13 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "salomatin88@bk.ru",
+      "password": "$2a$10$h1SO1pQELgfdi1FEXAg2K.vuuWJ9YCm6Rpi8ZOL8lBfIPVoNitBsm",
+      "passwordConfirm": "1234",
+      "login": "Алексей",
+      "id": 1
+    }
+  ],
   "motorcycles": [
     {
       "id": "c48f1b00-1e60-11ed-9479-670feb743a64",
@@ -667,7 +675,7 @@
       "drive": "Цепь",
       "cylinderArrangement": "Рядное",
       "price": 310000,
-      "preview": "../images/motorcycles/yamaha/r1/r1-2.jpg",
+      "preview": "../images/motorcycles/yamaha/r1/r1-4.jpg",
       "images": [
         "../images/motorcycles/yamaha/r1/r1-2.jpg",
         "../images/motorcycles/yamaha/r1/r1-10.jpg",

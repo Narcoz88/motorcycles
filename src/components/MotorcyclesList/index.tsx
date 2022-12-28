@@ -54,6 +54,15 @@ const MotorcyclesList: React.FC<Props> = ({initialList}) => {
 
     return (
         <div className={classes.MotorcyclesList}>
+            <div>
+                <span>Марка</span>
+                <span>Модель</span>
+                <span>Год</span>
+                <span>Цена</span>
+                <span>Мощность</span>
+                <span>Пробег</span>
+                <span>Цвет</span>
+            </div>
             <InfiniteScroll
                 dataLength={list.length}
                 next={nextPage}
@@ -64,10 +73,13 @@ const MotorcyclesList: React.FC<Props> = ({initialList}) => {
                 {list.map((item: IData) => {
                     return (
                         <Link to={`/motorcycles/${item.id}`} className={classes.item} key={item.id}>
-                            <div className={classes.wrapImage}>
-                                <img className={classes.image} src={item.preview} alt="pic" title={item.preview}/>
+                            <div className={classes.itemWrap}>
+                                <div className={classes.wrapImage}>
+                                    <img className={classes.image} src={item.preview} alt="pic" title={item.preview}/>
+                                </div>
+                                <p className={classes.title}><span>{item.brand} {item.model}</span><span>{item.year}г.</span></p>
+                                <p className={classes.title}><span>{item.odometer.toLocaleString()}км.</span><span>{item.price.toLocaleString()}р.</span></p>
                             </div>
-                            <div>{item.brand} {item.model}</div>
                         </Link>
                     )
                 })}
